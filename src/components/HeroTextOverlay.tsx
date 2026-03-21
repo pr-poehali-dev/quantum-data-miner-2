@@ -12,10 +12,10 @@ export default function HeroTextOverlay() {
       >
         КВИЗУЛЯ
       </h1>
-      <p className="text-foreground font-mono text-sm md:text-base max-w-xs tracking-widest lg:text-base">
-        КВИЗ — футбол и хоккей
+      <p className="text-foreground font-mono text-sm md:text-base max-w-sm tracking-wide lg:text-base leading-relaxed">
+        Спорт в вопросах и ответах!
         <br />
-        для спорт-баров и фанатов
+        Вопросы о футболе и хоккее — это не просто факты. Это эхо стадионов, шёпот рекордов, энергия мгновений, изменивших игру. Открой для себя глубину спорта: где каждый ответ — ступень к пониманию его души.
       </p>
     </div>
   )
