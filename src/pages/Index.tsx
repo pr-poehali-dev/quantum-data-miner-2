@@ -3,8 +3,113 @@ import Header from "@/components/Header"
 import RotatingTextAccent from "@/components/RotatingTextAccent"
 import Footer from "@/components/Footer"
 import HeroTextOverlay from "@/components/HeroTextOverlay"
+import { useState } from "react"
 
 const CDN_BASE = "https://cdn.poehali.dev/templates/meet-jack"
+
+function ContactForm() {
+  const [name, setName] = useState("")
+  const [bar, setBar] = useState("")
+  const [phone, setPhone] = useState("")
+  const [sent, setSent] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    setSent(true)
+  }
+
+  const inputClass =
+    "w-full bg-background border border-border rounded-xl px-4 py-3 text-foreground font-mono text-sm outline-none focus:border-primary transition-colors placeholder:text-muted-foreground"
+
+  return (
+    <div
+      className="rounded-4xl px-8 md:px-16 py-12 border border-primary/30 relative overflow-hidden"
+      style={{
+        background: "linear-gradient(135deg, hsl(82 85% 50% / 0.08) 0%, hsl(0 0% 7%) 60%)",
+      }}
+    >
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(ellipse at 80% 20%, hsl(82 85% 50% / 0.12) 0%, transparent 60%)`,
+        }}
+      />
+      <div className="relative z-10 flex flex-col md:flex-row gap-12 items-start">
+        <div className="flex-1">
+          <p className="text-accent font-mono text-sm mb-3 tracking-widest uppercase">Хотите квиз в своём баре?</p>
+          <h2
+            className="text-foreground text-3xl md:text-4xl font-bold mb-4 leading-tight"
+            style={{ fontFamily: "var(--font-montserrat)" }}
+          >
+            Оставьте заявку —<br />мы всё организуем
+          </h2>
+          <div className="space-y-3 mt-6">
+            {[
+              "Бесплатная консультация",
+              "Запуск квиза от 1 недели",
+              "Готовый сценарий и ведущий",
+            ].map((t) => (
+              <div key={t} className="flex items-center gap-3">
+                <span className="text-primary text-lg">✓</span>
+                <span className="text-muted-foreground font-mono text-sm">{t}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex-1 w-full">
+          {sent ? (
+            <div className="flex flex-col items-center justify-center h-full gap-4 py-10 text-center">
+              <span className="text-5xl">🏆</span>
+              <h3 className="text-foreground font-bold text-xl" style={{ fontFamily: "var(--font-montserrat)" }}>
+                Заявка отправлена!
+              </h3>
+              <p className="text-muted-foreground font-mono text-sm">Мы свяжемся с вами в ближайшее время.</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <input
+                className={inputClass}
+                placeholder="Ваше имя"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+              <input
+                className={inputClass}
+                placeholder="Название бара"
+                value={bar}
+                onChange={(e) => setBar(e.target.value)}
+                required
+              />
+              <input
+                className={inputClass}
+                placeholder="Телефон или Telegram"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+              <button
+                type="submit"
+                className="w-full py-4 rounded-xl font-bold text-base font-mono transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_hsl(82_85%_50%/0.4)]"
+                style={{
+                  background: "linear-gradient(135deg, hsl(82 85% 55%), hsl(82 85% 40%))",
+                  color: "hsl(0 0% 5%)",
+                  fontFamily: "var(--font-montserrat)",
+                }}
+              >
+                Хочу квиз в своём баре →
+              </button>
+              <p className="text-muted-foreground font-mono text-xs text-center">
+                Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+              </p>
+            </form>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
 
 const Index = () => {
   return (
@@ -179,6 +284,11 @@ const Index = () => {
               ))}
             </div>
           </div>
+        </section>
+
+        {/* Форма заявки */}
+        <section className="px-4 md:px-0 mt-6 mb-6">
+          <ContactForm />
         </section>
 
       </div>
