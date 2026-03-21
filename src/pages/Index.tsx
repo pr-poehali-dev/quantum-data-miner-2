@@ -252,7 +252,7 @@ const Index = () => {
               backgroundSize: "40px 40px",
             }}
           >
-            <p className="text-accent font-mono text-sm mb-3 tracking-widest uppercase">Для гостей бара</p>
+            <p className="text-accent font-mono text-sm mb-3 tracking-widest uppercase">Для участников квизов</p>
             <h2
               className="text-foreground text-3xl md:text-4xl font-bold mb-10 leading-tight"
               style={{ fontFamily: "var(--font-montserrat)" }}
