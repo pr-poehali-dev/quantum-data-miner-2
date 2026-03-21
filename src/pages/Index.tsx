@@ -73,6 +73,114 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* Выгоды для заказчиков — владельцев спорт-баров */}
+        <section className="px-4 md:px-0 mt-6">
+          <div className="rounded-4xl bg-card border border-border px-8 md:px-16 py-12">
+            <p className="text-accent font-mono text-sm mb-3 tracking-widest uppercase">Для владельцев спорт-баров</p>
+            <h2
+              className="text-foreground text-3xl md:text-4xl font-bold mb-10 leading-tight"
+              style={{ fontFamily: "var(--font-montserrat)" }}
+            >
+              Квиз = больше гостей,<br />выше выручка
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: "📈",
+                  title: "Рост среднего чека",
+                  desc: "Гости остаются дольше во время квиза — заказывают больше. В среднем средний чек вечера квиза выше на 30–40%.",
+                },
+                {
+                  icon: "🔁",
+                  title: "Постоянные гости",
+                  desc: "Квиз превращает случайных посетителей в постоянных. Люди возвращаются каждую неделю за новыми вопросами.",
+                },
+                {
+                  icon: "📣",
+                  title: "Сарафанное радио",
+                  desc: "Команды зовут друзей, делятся результатами — бар получает бесплатную рекламу через соцсети и рекомендации.",
+                },
+                {
+                  icon: "🗓️",
+                  title: "Заполненные будни",
+                  desc: "Квизы легко проводить в непиковые дни. Даже пустой вторник превращается в полный зал.",
+                },
+                {
+                  icon: "🏆",
+                  title: "Уникальное событие",
+                  desc: "Спортивный квиз — это повод прийти именно к вам, а не к конкурентам. Выделяйтесь на фоне обычных трансляций.",
+                },
+                {
+                  icon: "⚙️",
+                  title: "Под ключ",
+                  desc: "Мы берём на себя все вопросы, сценарий и ведение. От вас — только зал и желание зарабатывать больше.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-background rounded-2xl p-6 border border-border flex flex-col gap-3">
+                  <span className="text-3xl">{item.icon}</span>
+                  <h3 className="text-foreground font-semibold text-base" style={{ fontFamily: "var(--font-montserrat)" }}>
+                    {item.title}
+                  </h3>
+                  <p className="text-muted-foreground font-mono text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Польза для гостей */}
+        <section className="px-4 md:px-0 mt-6 mb-6">
+          <div className="rounded-4xl border border-border px-8 md:px-16 py-12"
+            style={{
+              backgroundImage: `linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)`,
+              backgroundSize: "40px 40px",
+            }}
+          >
+            <p className="text-accent font-mono text-sm mb-3 tracking-widest uppercase">Для гостей бара</p>
+            <h2
+              className="text-foreground text-3xl md:text-4xl font-bold mb-10 leading-tight"
+              style={{ fontFamily: "var(--font-montserrat)" }}
+            >
+              Докажи, что ты<br />настоящий фанат
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                {
+                  icon: "⚽",
+                  title: "Футбол и хоккей",
+                  desc: "Вопросы о легендарных матчах, рекордах, игроках — от советской классики до современных чемпионатов.",
+                },
+                {
+                  icon: "🤝",
+                  title: "Командная игра",
+                  desc: "Собирай команду с друзьями до 6 человек и соревнуйтесь с другими столиками в живом формате.",
+                },
+                {
+                  icon: "🎁",
+                  title: "Призы победителям",
+                  desc: "Лучшие команды получают призы от бара — напитки, сертификаты и другие приятные бонусы.",
+                },
+                {
+                  icon: "🧠",
+                  title: "Азарт и кайф",
+                  desc: "Квиз — это не просто просмотр трансляции. Живой азарт, споры за столом и настоящий командный дух.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="flex gap-5 items-start">
+                  <span className="text-4xl mt-1">{item.icon}</span>
+                  <div>
+                    <h3 className="text-foreground font-semibold text-base mb-1" style={{ fontFamily: "var(--font-montserrat)" }}>
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground font-mono text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
       </div>
       <Footer />
     </div>
