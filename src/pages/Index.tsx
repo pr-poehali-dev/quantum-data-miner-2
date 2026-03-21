@@ -301,7 +301,7 @@ const Index = () => {
                   <span className="text-primary font-bold text-4xl" style={{ fontFamily: "var(--font-montserrat)" }}>от 500 ₽</span>
                 </div>
                 <p className="text-muted-foreground font-mono text-sm leading-relaxed">
-                  Готовые квизы по футболу и хоккею — можно запустить уже сегодня. Тестовый период доступен бесплатно.
+                  Готовые квизы по футболу и хоккею — можно запустить уже сегодня. Тестовый период доступен для организаций бесплатно (тестовый квиз на 24 часа).
                 </p>
                 <ul className="space-y-2 mt-2">
                   {["Квизы по футболу и хоккею", "Быстрый старт — за 1 день", "Тестовый период бесплатно"].map((f) => (
