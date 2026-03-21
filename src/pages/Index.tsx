@@ -192,12 +192,12 @@ const Index = () => {
         {/* Выгоды для заказчиков — владельцев спорт-баров */}
         <section className="px-4 md:px-0 mt-6">
           <div className="rounded-4xl bg-card border border-border px-8 md:px-16 py-12">
-            <p className="text-accent font-mono text-sm mb-3 tracking-widest uppercase">Для владельцев спорт-баров</p>
+            <p className="text-accent font-mono text-sm mb-3 tracking-widest uppercase">Для спорт-баров</p>
             <h2
               className="text-foreground text-3xl md:text-4xl font-bold mb-10 leading-tight"
               style={{ fontFamily: "var(--font-montserrat)" }}
             >
-              Квиз = больше гостей,<br />выше выручка
+              Квизуля = больше гостей,<br />выше выручка
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
