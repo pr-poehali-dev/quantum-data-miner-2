@@ -9,7 +9,6 @@ const CDN_BASE = "https://cdn.poehali.dev/templates/meet-jack"
 
 function ContactForm() {
   const [name, setName] = useState("")
-  const [bar, setBar] = useState("")
   const [phone, setPhone] = useState("")
   const [sent, setSent] = useState(false)
 
@@ -34,32 +33,20 @@ function ContactForm() {
           backgroundImage: `radial-gradient(ellipse at 80% 20%, hsl(82 85% 50% / 0.12) 0%, transparent 60%)`,
         }}
       />
-      <div className="relative z-10 flex flex-col md:flex-row gap-12 items-start">
+      <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">
         <div className="flex-1">
-          <p className="text-accent font-mono text-sm mb-3 tracking-widest uppercase">Хотите квиз в своём баре?</p>
           <h2
             className="text-foreground text-3xl md:text-4xl font-bold mb-4 leading-tight"
             style={{ fontFamily: "var(--font-montserrat)" }}
           >
-            Оставьте заявку —<br />мы всё организуем
+            Хотите квиз?
           </h2>
-          <div className="space-y-3 mt-6">
-            {[
-              "Бесплатная консультация",
-              "Готовые квизы — запуск за 1 день",
-              "Тестовый период без обязательств",
-            ].map((t) => (
-              <div key={t} className="flex items-center gap-3">
-                <span className="text-primary text-lg">✓</span>
-                <span className="text-muted-foreground font-mono text-sm">{t}</span>
-              </div>
-            ))}
-          </div>
+          <p className="text-muted-foreground font-mono text-sm">Оставьте контакт — мы свяжемся и всё расскажем.</p>
         </div>
 
         <div className="flex-1 w-full">
           {sent ? (
-            <div className="flex flex-col items-center justify-center h-full gap-4 py-10 text-center">
+            <div className="flex flex-col items-center justify-center h-full gap-4 py-6 text-center">
               <span className="text-5xl">🏆</span>
               <h3 className="text-foreground font-bold text-xl" style={{ fontFamily: "var(--font-montserrat)" }}>
                 Заявка отправлена!
@@ -77,13 +64,6 @@ function ContactForm() {
               />
               <input
                 className={inputClass}
-                placeholder="Название бара"
-                value={bar}
-                onChange={(e) => setBar(e.target.value)}
-                required
-              />
-              <input
-                className={inputClass}
                 placeholder="Телефон или Telegram"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
@@ -91,14 +71,14 @@ function ContactForm() {
               />
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl font-bold text-base font-mono transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_hsl(82_85%_50%/0.4)]"
+                className="w-full py-4 rounded-xl font-bold text-base transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_30px_hsl(82_85%_50%/0.4)]"
                 style={{
                   background: "linear-gradient(135deg, hsl(82 85% 55%), hsl(82 85% 40%))",
                   color: "hsl(0 0% 5%)",
                   fontFamily: "var(--font-montserrat)",
                 }}
               >
-                Хочу квиз в своём баре →
+                Хочу квиз →
               </button>
               <p className="text-muted-foreground font-mono text-xs text-center">
                 Нажимая кнопку, вы соглашаетесь на обработку персональных данных
