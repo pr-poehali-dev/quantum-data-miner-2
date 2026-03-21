@@ -160,20 +160,30 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="flex flex-col gap-2 max-w-5xl">
-              <div className="flex items-center gap-4">
-                <span className="text-accent font-mono text-sm">Тема</span>
-                <span className="text-foreground font-mono text-sm">Футбол и Хоккей</span>
+            <div className="flex flex-col gap-6 max-w-5xl">
+              <div>
+                <p className="text-accent font-mono text-sm mb-2 tracking-widest uppercase">Миссия компании</p>
+                <p className="text-foreground font-mono text-sm leading-relaxed">
+                  Наша миссия — популяризировать спорт через увлекательные интерактивные форматы, вдохновлять новые поколения на достижение спортивных высот и сохранять память о великих спортсменах и значимых событиях в мире футбола и хоккея. Мы создаём квизы, которые объединяют людей разных возрастов, пробуждают интерес к спорту, показывают примеры выдающихся достижений и мотивируют стремиться к собственным рекордам.
+                </p>
               </div>
-              <div className="flex items-center gap-4">
-                <span className="text-accent font-mono text-sm">Формат</span>
-                <span className="text-foreground font-mono text-sm">Интерактивные спортивные квизы</span>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="text-accent font-mono text-sm">Миссия</span>
-                <span className="text-foreground font-mono text-sm">
-                  Проверь, насколько хорошо ты знаешь спорт. Вопросы о легендах, матчах и рекордах — для настоящих фанатов.
-                </span>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                {[
+                  { label: "Вдохновение", desc: "Мы показываем, что спорт — это не только соревнования, но и истории успеха, преодоления и командной работы." },
+                  { label: "Образование через развлечение", desc: "Наши квизы учат, не превращаясь в уроки: факты о спорте запоминаются легко и надолго." },
+                  { label: "Связь поколений", desc: "Мы объединяем опыт легенд спорта и энергию молодых талантов, создавая мост между прошлым и будущим." },
+                  { label: "Доступность", desc: "Квизы подходят для любого уровня подготовки: от новичка до эксперта." },
+                  { label: "Сообщество", desc: "Мы строим сообщество людей, которые любят спорт и ценят его историю." },
+                ].map((v) => (
+                  <div key={v.label} className="flex items-start gap-3">
+                    <span className="text-accent mt-0.5 font-mono text-sm shrink-0">—</span>
+                    <div>
+                      <span className="text-accent font-mono text-sm">{v.label}. </span>
+                      <span className="text-foreground font-mono text-sm">{v.desc}</span>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
