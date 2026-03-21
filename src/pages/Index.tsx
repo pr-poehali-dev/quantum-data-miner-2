@@ -277,6 +277,65 @@ const Index = () => {
         </section>
 
         {/* Форма заявки */}
+        {/* Цены */}
+        <section className="px-4 md:px-0 mt-6">
+          <div className="rounded-4xl bg-card border border-border px-8 md:px-16 py-12">
+            <p className="text-accent font-mono text-sm mb-3 tracking-widest uppercase">Стоимость</p>
+            <h2
+              className="text-foreground text-3xl md:text-4xl font-bold mb-10 leading-tight"
+              style={{ fontFamily: "var(--font-montserrat)" }}
+            >
+              Выберите свой формат
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Готовые квизы */}
+              <div className="bg-background rounded-2xl p-8 border border-primary/40 flex flex-col gap-4 relative overflow-hidden">
+                <div className="absolute top-0 right-0 bg-primary text-primary-foreground font-mono text-xs px-4 py-1 rounded-bl-xl font-bold">
+                  Хит
+                </div>
+                <span className="text-4xl">🎯</span>
+                <h3 className="text-foreground font-bold text-xl" style={{ fontFamily: "var(--font-montserrat)" }}>
+                  Готовый квиз
+                </h3>
+                <div className="flex items-end gap-2">
+                  <span className="text-primary font-bold text-4xl" style={{ fontFamily: "var(--font-montserrat)" }}>от 500 ₽</span>
+                </div>
+                <p className="text-muted-foreground font-mono text-sm leading-relaxed">
+                  Готовые квизы по футболу и хоккею — можно запустить уже сегодня. Тестовый период доступен бесплатно.
+                </p>
+                <ul className="space-y-2 mt-2">
+                  {["Квизы по футболу и хоккею", "Быстрый старт — за 1 день", "Тестовый период бесплатно"].map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-foreground font-mono text-sm">
+                      <span className="text-primary">✓</span> {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Квиз под заказ */}
+              <div className="bg-background rounded-2xl p-8 border border-border flex flex-col gap-4">
+                <span className="text-4xl">✏️</span>
+                <h3 className="text-foreground font-bold text-xl" style={{ fontFamily: "var(--font-montserrat)" }}>
+                  Квиз под заказ
+                </h3>
+                <div className="flex items-end gap-2">
+                  <span className="text-foreground font-bold text-4xl" style={{ fontFamily: "var(--font-montserrat)" }}>Индивидуально</span>
+                </div>
+                <p className="text-muted-foreground font-mono text-sm leading-relaxed">
+                  Создадим квиз под вашу тему, аудиторию и формат. Стоимость рассчитывается индивидуально после консультации.
+                </p>
+                <ul className="space-y-2 mt-2">
+                  {["Любая тема и формат", "Уникальные вопросы", "Персональный расчёт стоимости"].map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-foreground font-mono text-sm">
+                      <span className="text-primary">✓</span> {f}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="px-4 md:px-0 mt-6 mb-6">
           <ContactForm />
         </section>
