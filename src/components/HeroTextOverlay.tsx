@@ -10,7 +10,7 @@ export default function HeroTextOverlay() {
           paintOrder: "stroke fill",
         }}
       >
-        СПОРТ
+        КВИЗУЛЯ
       </h1>
       <p className="text-foreground font-mono text-sm md:text-base max-w-xs tracking-widest lg:text-base">
         КВИЗ — футбол и хоккей
