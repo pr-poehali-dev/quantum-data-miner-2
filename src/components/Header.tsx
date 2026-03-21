@@ -8,7 +8,8 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/0 backdrop-blur-sm">
       <div className="flex items-center justify-between px-6 py-4 text-transparent">
         <div className="flex items-center gap-3">
-          <img src={`${CDN_BASE}/logo.svg`} alt="Logo" width={100} height={32} className="h-auto" />
+          <img src="https://cdn.poehali.dev/projects/38cebce4-482e-4638-afce-18fbedac604c/bucket/fbbef979-ee24-4d0c-b124-72c4cd41106b.jpg" alt="Квизуля" width={48} height={48} className="h-12 w-12 object-contain rounded-lg" />
+          <span className="text-foreground font-bold text-lg tracking-wide" style={{ fontFamily: "var(--font-montserrat)" }}>Квизуля</span>
         </div>
 
         <div className="flex items-center gap-2">
