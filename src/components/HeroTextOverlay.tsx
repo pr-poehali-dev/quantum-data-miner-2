@@ -10,12 +10,12 @@ export default function HeroTextOverlay() {
           paintOrder: "stroke fill",
         }}
       >
-        МАКС
+        КВИЗ
       </h1>
       <p className="text-foreground font-mono text-sm md:text-base max-w-xs tracking-widest lg:text-base">
-        Ваш надежный гид
+        Спортивные квизы
         <br />
-        в мире баз данных
+        по футболу и хоккею
       </p>
     </div>
   )
