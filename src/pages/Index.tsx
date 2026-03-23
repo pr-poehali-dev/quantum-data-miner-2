@@ -232,7 +232,7 @@ const Index = () => {
               backgroundSize: "40px 40px",
             }}
           >
-            <p className="text-accent font-mono text-sm mb-3 tracking-widest uppercase">Для участников квизов</p>
+            <p className="text-accent font-mono text-sm mb-3 tracking-widest uppercase">Для участников викторин</p>
             <h2
               className="text-foreground text-3xl md:text-4xl font-bold mb-10 leading-tight"
               style={{ fontFamily: "var(--font-montserrat)" }}
@@ -249,7 +249,7 @@ const Index = () => {
                 {
                   icon: "🤝",
                   title: "Командная игра",
-                  desc: "Собирай команду с друзьями и соревнуйтесь в живом формате.",
+                  desc: "Собирай команду с друзьями и соревнуйтесь в живом формате, на дне рождении в школе, перед или после тренировки.",
                 },
                 {
                   icon: "🎁",
@@ -259,7 +259,7 @@ const Index = () => {
                 {
                   icon: "🧠",
                   title: "Азарт и кайф",
-                  desc: "Квиз — для бойцов! Каждый вопрос — мини‑матч, каждая дискуссия — тактический разбор, каждый верный ответ — шаг к победе. Здесь нет места пассивности: только живой азарт, умственная нагрузка и вкус заслуженного триумфа.",
+                  desc: "Викторина — для бойцов! Каждый вопрос — мини‑матч, каждая дискуссия — тактический разбор, каждый верный ответ — шаг к победе. Здесь нет места пассивности: только живой азарт, умственная нагрузка и вкус заслуженного триумфа.",
                 },
               ].map((item) => (
                 <div key={item.title} className="flex gap-5 items-start">
