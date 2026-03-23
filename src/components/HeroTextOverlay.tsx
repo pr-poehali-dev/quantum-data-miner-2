@@ -10,7 +10,7 @@ export default function HeroTextOverlay() {
           paintOrder: "stroke fill",
         }}
       >
-        КВИЗУЛЯ
+        СПОВИК
       </h1>
       <p className="text-foreground font-mono text-sm md:text-base max-w-sm tracking-wide lg:text-base leading-relaxed">
         Спорт в вопросах и ответах!

@@ -58,13 +58,13 @@ export default function Footer() {
 
         <div id="contact" className="w-full px-6 py-16 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-0 border-t border-border mt-16">
           <div className="flex flex-col md:flex-row gap-2 text-center md:text-left">
-            <h2 className="text-foreground font-mono text-xl font-bold">Готов к квизу?</h2>
+            <h2 className="text-foreground font-mono text-xl font-bold">Готов к викторине?</h2>
             <p className="text-foreground font-mono font-normal text-base">Проверь свои знания футбола и хоккея</p>
           </div>
 
           <a href="mailto:hello@example.com">
             <button className="bg-primary text-primary-foreground px-8 py-4 rounded-full font-semibold text-lg whitespace-nowrap hover:scale-105 hover:shadow-[0_0_20px_hsl(var(--primary)/0.5)] transition-all duration-300 font-mono flex items-center gap-2">
-              Начать квиз
+              Начать викторину
               <svg
                 width="20"
                 height="20"
@@ -82,7 +82,7 @@ export default function Footer() {
         </div>
 
         <div className="w-full px-6 py-4 border-t border-border flex md:flex-row items-center justify-between gap-2 flex-row">
-          <p className="text-muted-foreground text-sm font-mono">2025 СпортКвиз</p>
+          <p className="text-muted-foreground text-sm font-mono">2025 Сповик</p>
           <p className="text-muted-foreground text-sm font-mono">poehali.dev</p>
         </div>
       </div>
